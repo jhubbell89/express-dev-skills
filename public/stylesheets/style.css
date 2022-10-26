@@ -4,10 +4,23 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  cursor: pointer;
+  color: red;
+}
+a:hover {
+  cursor: pointer;
+  color: green;
 }
 
 html {
   background-color: black;
   color: white;
+}
+
+h1 {
+  color: yellow;
+}
+
+h3 {
+  color: rgb(205, 50, 171);
 }

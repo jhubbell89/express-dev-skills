@@ -1,11 +1,13 @@
 const skills = [
     {id: 125223, skill: 'HTML', level: true},
     {id: 127904, skill: 'CSS', level: true},
-    {id: 139608, skill: 'Java Script', level: false}
+    {id: 139608, skill: 'Java Script', level: true},
+    {id: 159201, skill: 'Espress', level: false}
 ];
   
 module.exports = {
-    getAll, getOne
+    getAll, 
+    getOne
 };
 
 function getOne(id) {

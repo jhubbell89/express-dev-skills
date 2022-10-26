@@ -1,10 +1,11 @@
  // controllers/skills.js
 
  // Should name the model in uppercase and singular
- const Skill = require('../models/skills');
+ const Skill = require('../models/skill');
 
 module.exports = {
-    index
+    index,
+    show
 };
   
 function index(req, res) {

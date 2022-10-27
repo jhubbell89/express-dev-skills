@@ -8,8 +8,15 @@ const skills = [
 module.exports = {
     getAll, 
     getOne,
+    create,
     deleteOne
 };
+
+
+
+function getAll() {
+    return skills;
+}
 
 function getOne(id) {
     // URL params are strings - convert to a number
@@ -17,10 +24,14 @@ function getOne(id) {
     return skills.find(skill => skill.id === id);
 }
 
-function getAll() {
-    return skills;
-}
- 
+function create(skill) {
+    // Add the id
+    skill.id = Date.now() % 1000000;
+    // New skills wouldn't be done :)
+    skill.done = false;
+    skills.push(skill);
+  }
+
 function deleteOne(id) {
     // All properties attached to req.params are strings!
     id = parseInt(id);

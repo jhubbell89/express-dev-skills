@@ -6,7 +6,10 @@
 module.exports = {
     index,
     show,
-    delete: deleteSkill
+    new: newSkill,
+    create,
+    delete: deleteSkill,
+    edit
 };
   
 function index(req, res) {
@@ -14,14 +17,31 @@ function index(req, res) {
       skills: Skill.getAll()
     });
 }
- 
+
 function show(req, res) {
     res.render('skills/show', {
       skill: Skill.getOne(req.params.id),
     });
 }
 
+function newSkill(req, res) {
+  res.render('skills/new');
+}
+
+function create(req, res) {
+  console.log(req.body);
+  // The model is responsible for creating data
+  Skill.create(req.body);
+  // Do a redirect anytime data is changed
+  res.redirect('/skills');
+}
+
 function deleteSkill(req, res) {
   Skill.deleteOne(req.params.id);
   res.redirect('/skills');
+}
+
+function edit(req, res) {
+  console.log('worked')
+  res.render('skills/edit');
 }

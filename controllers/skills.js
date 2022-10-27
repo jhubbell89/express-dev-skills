@@ -9,7 +9,8 @@ module.exports = {
     new: newSkill,
     create,
     delete: deleteSkill,
-    edit
+    edit,
+    update
 };
   
 function index(req, res) {
@@ -42,7 +43,14 @@ function deleteSkill(req, res) {
 }
 
 function edit(req, res) {
-  
-  res.render('skills/edit');
+  res.render('skills/edit', {
+    skill: Skill.getOne(req.params.id)
+  });
+}
+
+function update(req, res) {
+req.body.id = req.params.id
+  Todo.updateOne(req.body)
+  res.redirect('/todos/' + req.params.id)
 }
 

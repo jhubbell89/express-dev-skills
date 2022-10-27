@@ -14,9 +14,11 @@ var skillsCtrl = require('../controllers/skills');
 // GET /skills
 router.get('/', skillsCtrl.index);
 router.get('/new', skillsCtrl.new);
-router.get('/edit', skillsCtrl.edit);
 router.get('/:id', skillsCtrl.show);
-
+router.get('/:id/edit', skillsCtrl.edit);
 router.post('/', skillsCtrl.create);
 router.delete('/:id', skillsCtrl.delete);
+router.post('/:id', skillsCtrl.update)
+
+
 module.exports = router;

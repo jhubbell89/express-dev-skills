@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edit Skill</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-    <h1>Edit Skill</h1>
+    <h1>Edit Skill: </h1>
     
-    <form action="/skills/:id" method="POST" autocomplete="off">
+    <form action="/skills/<%= skill.id %> " method="PUT" autocomplete="off">
         <input type="text" name="editskill">
         
         <br>
-        <label for="done-input">Are you proficient?</label>
-        <input type="checkbox" id="proficientCB" name="proficientCB" />
+        <label for="done-input" placeholder="<%=   %> ">Are you proficient ?</label>
+        <input type="checkbox" id="proficientCB" name="proficientCB"/>
+        
         <button type="submit">Edit Skill</button>
     </form>
 </body>

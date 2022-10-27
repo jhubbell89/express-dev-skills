@@ -10,8 +10,6 @@
 <body>
     <h3><%= skill.skill %></h3>
     <h3>Status: <%= skill.level ? 'Okay' : 'Not Okay' %></h3>
-    <form action="/edit" method="POST" autocomplete="off">
-        <button type="submit">Edit Skill?</button>
-    </form>
+    <a href="/skills/edit">Edit Skill</a>
 </body>
 </html>

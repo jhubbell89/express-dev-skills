@@ -1,4 +1,6 @@
-const skills = [];
+const skills = [
+    {id:123456 , skill: 'test', done: false}
+];
   
 module.exports = {
     getAll, 

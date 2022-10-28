@@ -1,5 +1,9 @@
 const skills = [
-    {id:123456 , skill: 'test', done: false}
+    {id:123456 , skill: 'test', done: false},
+    {id:564738 , skill: 'also a test', done: true},
+    {id:111111 , skill: 'maybe a test', done: false},
+    {id:986543 , skill: 'click at your own danger', done: false},
+    {id:123476 , skill: 'so you like tempting the fates', done: false}
 ];
   
 module.exports = {

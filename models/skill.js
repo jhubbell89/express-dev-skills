@@ -6,7 +6,8 @@ module.exports = {
     getAll, 
     getOne,
     create,
-    deleteOne
+    deleteOne,
+    updateOne
 };
 
 
@@ -27,7 +28,7 @@ function create(skill) {
     // New skills wouldn't be done :)
     skill.done = false;
     skills.push(skill);
-  }
+}
 
 function deleteOne(id) {
     // All properties attached to req.params are strings!
@@ -35,4 +36,11 @@ function deleteOne(id) {
     // Find the index based on the id of the skill object
     const idx = skills.findIndex(skill => skill.id === id);
     skills.splice(idx, 1);
-  }
+}
+
+function updateOne(id, skill) {
+    id = parseInt(id);
+    const foundSkill = skills.find((skill) => skill.id ===id);
+    foundSkill.skill = skill.skill;
+    foundSkill.done = skill.done !== "false"
+}

@@ -50,7 +50,7 @@ function edit(req, res) {
 
 function update(req, res) {
 req.body.id = req.params.id
-  Todo.updateOne(req.body)
-  res.redirect('/todos/' + req.params.id)
+  Skill.updateOne(req.body)
+  res.redirect('/skills/' + req.params.id)
 }
 
